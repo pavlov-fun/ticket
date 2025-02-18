@@ -3,6 +3,7 @@ package com.example.demo.dbo;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -18,8 +19,8 @@ public class Flight {
     @Column
     private Date date;
 
-    @ManyToMany
-    private Set<Offer> offers;
+    @ManyToMany(cascade = {CascadeType.ALL})
+    private Set<Offer> offers = new HashSet<>();
 
     public Long getId() {
         return id;

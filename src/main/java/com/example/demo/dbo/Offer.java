@@ -11,7 +11,7 @@ public class Offer {
     @Id
     @GeneratedValue
     private Long id;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.ALL})
     private Prise prise;
 
     public Offer(String name, String description, BigDecimal price) {

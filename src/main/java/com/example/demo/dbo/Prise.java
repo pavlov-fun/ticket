@@ -2,6 +2,7 @@ package com.example.demo.dbo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 import java.math.BigDecimal;
@@ -10,6 +11,7 @@ import java.math.BigDecimal;
 public class Prise {
 
     @Id
+    @GeneratedValue
     private Long id;
 
     @Column
